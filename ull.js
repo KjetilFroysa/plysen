@@ -1,11 +1,7 @@
-const form = document.getElementById('goodShit');
+const knapp = document.getElementsByClassName('regn-ut')
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const kvalitet = data.kvalitet;
-    const mengde = data.mengde;
-    console.log(data);
+knapp.addEventListener('click', () => {
+    const kvalitet = document.getElementsByID('kvalitet').value();
+    const mengde = document.getElementsByID('mengde').value();
+    console.log(kvalitet + mengde);
 });
-
-
