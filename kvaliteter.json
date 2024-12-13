@@ -1,9 +1,87 @@
-{
-    "navn": "hifa",
-    "nummer": "6054",
-    "oppskrift": {
-        "c1": "97.5",
-        "c1_svart": "2.5",
-        "c1_brun": "0"
-    }
-}
+[
+    [
+        {
+            "nummer": "6054",
+            "oppskrift": {
+                "c1": 97.5,
+                "c1_svart": 2.5,
+                "c1_brun": 0
+            }
+        },
+        {
+            "nummer": "6055",
+            "oppskrift": {
+                "c1": 88,
+                "c1_svart": 12,
+                "c1_brun": 0
+            }
+        },
+        {
+            "nummer": "6056",
+            "oppskrift": {
+                "c1": 17,
+                "c1_svart": 83,
+                "c1_brun": 0
+            }
+        },
+        {
+            "nummer": "6058",
+            "oppskrift": {
+                "c1": 90,
+                "c1_svart": 0,
+                "c1_brun": 10
+            }
+        },
+        {
+            "nummer": "6061",
+            "oppskrift": {
+                "c1": 67,
+                "c1_svart": 33,
+                "c1_brun": 0
+            }
+        },
+        {
+            "nummer": "6102",
+            "oppskrift": {
+                "c1": 56,
+                "c1_svart": 9,
+                "c1_brun": 35
+            }
+        },
+        {
+            "nummer": "6103",
+            "oppskrift": {
+                "c1": 10,
+                "c1_svart": 50,
+                "c1_brun": 40
+            }
+        }
+    ],
+    [
+        {
+            "nummer": "702",
+            "oppskrift": {
+                "c1": 100,
+                "c1_svart": 0,
+                "c1_brun": 0
+            }
+        },
+        {
+            "nummer": "703",
+            "oppskrift": {
+                "c1": 95,
+                "c1_svart": 5,
+                "c1_brun": 0
+            }
+        },
+        {
+            "nummer": "704",
+            "oppskrift": {
+                "c1": 100,
+                "c1_svart": 0,
+                "c1_brun": 0
+            }
+        }
+
+    ]
+]
