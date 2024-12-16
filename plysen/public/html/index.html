@@ -4,14 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plysen- Kalkulator</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../stylesheets/styles.css">
 </head>
 <body>
-    <input type="text" id="kvalitet" value="" placeholder="Kvalitet">
-    <input type="number" id="mengde" value="" placeholder="Antall KG?">
-    <button id="regn-ut">Beregn</button>
+    <div class="container">
+        <h1>Ull Kalkulator</h1>
+        
+    <form>
+        <div class="row">
+            <div class="col">
+            <label for="ulltype">Kvalitet</label>
+            <select class="form-control form-control-lg" id="ulltype">
+                <option>Velg Kvalitet</option>
+                <option value="hifa">HIFA</option>
+                <option value="ragg">Ragg</option>
+                <option value="lsv">Luna/Sol/Vilje</option>
+                <option value="troll">Troll</option>
+            </select>
+            </div>
+            
+            <div class="col">
+            <label for="nummer">Nummer</label>
+            <select class="form-control form-control-lg" id="nummer">
+                <option>Velg Nummer</option>
+                <option value="6054">6054</option>
+                <option value="6055">6055</option>
+                <option value="6056">6056</option>
+                <option value="6058">6058</option>
+                <option value="6061">6061</option>
+                <option value="6102">6102</option>
+                <option value="6103">6103</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="">
+            <label for="mengde">Antall KG</label>
+            <input type="text" class="form-control" id="mengde" placeholder="F.eks 200">
+            <button id="regn-ut">Beregn</button>
+        </div>
+    </form>
     
     <p class="result"></p>
 
+    <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../javascripts/ull.js"></script>
 </body>
 </html>
