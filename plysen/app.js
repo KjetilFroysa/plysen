@@ -1,6 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const fs = require('fs');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
@@ -19,7 +20,19 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
+app.get('/data/recipes', (req, res) => {
+  const recipesPath = path.join(__dirname, '/data/recipes.json');
+  fs.readFile(recipesPath, 'utf8', (err, data) => {
+      if (err) {
+          res.status(500).send('Error reading recipes file');
+          return;
+      }
+      res.json(JSON.parse(data));
+  });
+});
+
 app.use('/', indexRouter);
+
 
 
 // catch 404 and forward to error handler

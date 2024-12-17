@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Ull Kalkulator</h1>
         
-    <form>
+    <form id="ullForm">
         <div class="row">
             <div class="col">
             <label for="ulltype">Kvalitet</label>
@@ -39,14 +39,14 @@
             </div>
         </div>
 
-        <div class="">
+        <div class="form-group row">
             <label for="mengde">Antall KG</label>
             <input type="text" class="form-control" id="mengde" placeholder="F.eks 200">
-            <button id="regn-ut">Beregn</button>
+            <button type="submit" id="regn-ut" class="btn btn-success">Beregn</button>
         </div>
     </form>
     
-    <p class="result"></p>
+    <div id="resultTable"></div>
 
     <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
