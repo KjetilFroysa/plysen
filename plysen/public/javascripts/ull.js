@@ -156,28 +156,42 @@ function regnUt(mengde, oppskrift) {
 
 function displayResult(result, oppskrift) {
   // Create table
-  let table = document.createElement("table");
-  let tbody = document.createElement("tbody");
+  let table = document.createElement('table');
+  table.id = 'resultTableCSS';
+  table.className = 'table table-striped table-bordered table-hover';
+  let thead = document.createElement('thead');
+  let tbody = document.createElement('tbody');
+
+  // Create header row
+  let headerRow = document.createElement('tr');
+  let headerCell1 = document.createElement('th');
+  let headerCell2 = document.createElement('th');
+  headerCell1.textContent = 'Property';
+  headerCell2.textContent = 'Value';
+  headerRow.appendChild(headerCell1);
+  headerRow.appendChild(headerCell2);
+  thead.appendChild(headerRow);
 
   // Add rows to table
   result.forEach((value, index) => {
-    let row = document.createElement('tr');
-    let cell1 = document.createElement('td');
-    let cell2 = document.createElement('td');
-    const propertyName = Object.keys(oppskrift)[index];
-    console.log('Property Name:', propertyName); // Debugging statement
-    cell1.textContent = propertyName; // Use the property name
-    cell2.textContent = value;
-    row.appendChild(cell1);
-    row.appendChild(cell2);
-    tbody.appendChild(row);
-});
+      let row = document.createElement('tr');
+      let cell1 = document.createElement('td');
+      let cell2 = document.createElement('td');
+      const propertyName = Object.keys(oppskrift)[index];
+      console.log('Property Name:', propertyName); // Debugging statement
+      cell1.textContent = propertyName; // Use the property name
+      cell2.textContent = value;
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      tbody.appendChild(row);
+  });
 
+  table.appendChild(thead);
   table.appendChild(tbody);
 
   // Clear previous results
-  const resultTable = document.getElementById("resultTable");
-  resultTable.innerHTML = "";
+  let resultTable = document.getElementById('resultTable');
+  resultTable.innerHTML = '';
 
   // Append table to the resultTable div
   resultTable.appendChild(table);

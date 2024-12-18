@@ -9,6 +9,12 @@ a {
   color: #00B7FF;
 }
 
+#resultTable {
+  margin: 0 auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
 h1 {
   font-size: 50px;
   margin-bottom: 30px;
