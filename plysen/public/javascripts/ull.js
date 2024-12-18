@@ -70,21 +70,17 @@ const nummerOptions = {
   ],
 };
 
+//Forandre Nummer input basert på ulltype
 document.getElementById('ulltype').addEventListener('change', function() {
   const ulltype = this.value;
   const nummerSelect = document.getElementById('nummer');
-
-  // Clear existing options
   nummerSelect.innerHTML = '';
-
-  // Add default option
   const defaultOption = document.createElement('option');
     defaultOption.text = 'Velg Nummer';
     defaultOption.disabled = true;
     defaultOption.selected = true;
     nummerSelect.add(defaultOption);
 
-  // Add new options based on selected ulltype
   if (nummerOptions[ulltype]) {
       nummerOptions[ulltype].forEach(option => {
           const newOption = document.createElement('option');
@@ -95,7 +91,7 @@ document.getElementById('ulltype').addEventListener('change', function() {
   }
 });
 
-
+//"Beregn" knappen
 document.getElementById("ullForm").addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -103,7 +99,7 @@ document.getElementById("ullForm").addEventListener("submit", function (event) {
   const nummer = document.getElementById("nummer").value;
   const mengde = parseFloat(document.getElementById("mengde").value);
 
-  // Fetch the recipes.json file from the server
+  // Henter oppskriftene fra json-filen
   fetch("/data/recipes")
     .then((response) => {
       if (!response.ok) {
@@ -155,15 +151,21 @@ function regnUt(mengde, oppskrift) {
 }
 
 function displayResult(result, oppskrift) {
+  //Result er resultatet av regnUt funksjonen, og oppskrift er alle verdiene
+  //i oppskrift listen fra database objektet
+  
   // Create table
   let table = document.createElement('table');
   table.id = 'resultTable2';
-  table.className = 'table table-striped table-bordered table-hover';
+  table.className = 'table table-bordered table-hover';
+
   let thead = document.createElement('thead');
   let tbody = document.createElement('tbody');
 
-  // Create header row
+  // Create 2 header rows, en med navn, og en med prosent
   let headerRow = document.createElement('tr');
+  let headerRowProsent = document.createElement('tr');
+
   let headerCell1 = document.createElement('th');
   let headerCell2 = document.createElement('th');
   headerCell1.textContent = 'Property';
