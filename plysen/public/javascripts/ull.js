@@ -157,7 +157,7 @@ function regnUt(mengde, oppskrift) {
 function displayResult(result, oppskrift) {
   // Create table
   let table = document.createElement('table');
-  table.id = 'resultTableCSS';
+  table.id = 'resultTable2';
   table.className = 'table table-striped table-bordered table-hover';
   let thead = document.createElement('thead');
   let tbody = document.createElement('tbody');

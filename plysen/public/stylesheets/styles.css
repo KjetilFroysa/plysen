@@ -9,9 +9,11 @@ a {
   color: #00B7FF;
 }
 
-#resultTable {
+#resultTable2 {
   margin: 0 auto;
-  width: 50%;
+  margin-top: 20px;
+  text-align: center;
+  width: auto;
   border-collapse: collapse;
 }
 
