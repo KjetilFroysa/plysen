@@ -133,8 +133,316 @@
             }
         }],
 
-        "ragg": [{
-            
-        }]
+        "ragg": [
+        {
+            "nummer": "kvit",
+            "oppskrift": {
+                "c1": 80,
+                "nylon": 20
+            }
+        },
+        {
+            "nummer": "svart",
+            "oppskrift": {
+                "c1_svart": 80,
+                "nylon_svart": 20
+            }
+        }],
 
+        "bondegarn": [
+        {
+            "nummer": "110",
+            "oppskrift": {
+                "c1": 74,
+                "c1_svart": 6,
+                "nylon": 20
+            }
+        },
+        {
+            "nummer": "115",
+            "oppskrift": {
+                "c1": 64,
+                "c1_svart": 16,
+                "nylon": 20
+            }
+        },
+        {
+            "nummer": "130",
+            "oppskrift": {
+                "c1": 50,
+                "c1_svart": 30,
+                "nylon": 20
+            }
+        }],
+        "uvasket": [
+        {
+            "nummer": "100",
+            "oppskrift": {
+                "c1": 75,
+                "c1_svart": 0,
+                "c1_uvasket": 25
+            }
+        },
+        {
+            "nummer": "110",
+            "oppskrift": {
+                "c1": 71,
+                "c1_svart": 4,
+                "c1_uvasket": 25
+            }
+        },
+        {
+            "nummer": "115",
+            "oppskrift": {
+                "c1": 59,
+                "c1_svart": 16,
+                "c1_uvasket": 25
+            }
+        },
+        {
+            "nummer": "130",
+            "oppskrift": {
+                "c1": 45,
+                "c1_svart": 30,
+                "c1_uvasket": 25
+            }
+        }],
+        "vevgarn": [
+        {
+            "nummer": "5427",
+            "oppskrift": {
+                "c1": 0,
+                "c1_svart": 0,
+                "c1_brun": 40,
+                "f1_hvit": 10,
+                "f1_svart": 50
+            }
+        },
+        {
+            "nummer": "5428",
+            "oppskrift": {
+                "c1": 17,
+                "c1_svart": 18,
+                "c1_brun": 0,
+                "f1_hvit": 0,
+                "f1_svart": 65
+            }
+        },
+        {
+            "nummer": "5429",
+            "oppskrift": {
+                "c1": 0,
+                "c1_svart": 30,
+                "c1_brun": 0,
+                "f1_hvit": 70,
+                "f1_svart": 0
+            }
+        },
+        {
+            "nummer": "5430",
+            "oppskrift": {
+                "c1": 25,
+                "c1_svart": 10,
+                "c1_brun": 0,
+                "f1_hvit": 65,
+                "f1_svart": 0
+            }
+        },
+        {
+            "nummer": "5431",
+            "oppskrift": {
+                "c1": 32,
+                "c1_svart": 3,
+                "c1_brun": 0,
+                "f1_hvit": 65,
+                "f1_svart": 0
+            }
+        },
+        {
+            "nummer": "5432",
+            "oppskrift": {
+                "c1": 25,
+                "c1_svart": 0,
+                "c1_brun": 10,
+                "f1_hvit": 65,
+                "f1_svart": 0
+            }
+        },
+        {
+            "nummer": "5433",
+            "oppskrift": {
+                "c1": 0,
+                "c1_svart": 0,
+                "c1_brun": 35,
+                "f1_hvit": 65,
+                "f1_svart": 0
+            }
+        },
+        {
+            "nummer": "5480",
+            "oppskrift": {
+                "c1": 35,
+                "c1_svart": 57,
+                "c1_brun": 0,
+                "f1_hvit": 8,
+                "f1_svart": 0
+            }
+        }],
+        "lsvkv": [
+        {
+            "nummer": "413",
+            "oppskrift": {
+                "c1f": 97.5,
+                "c1f_brun": 0,
+                "c1f_beige": 0,
+                "c1f_svart": 2.5,
+                "f1p": 0,
+                "f1p_svart": 0
+            }
+        },
+        {
+            "nummer": "415",
+            "oppskrift": {
+                "c1f": 17,
+                "c1f_brun": 0,
+                "c1f_beige": 0,
+                "c1f_svart": 83,
+                "f1p": 0,
+                "f1p_svart": 0
+            }
+        },
+        {
+            "nummer": "449",
+            "oppskrift": {
+                "c1f": 87.5,
+                "c1_brun": 2.5,
+                "c1f_beige": 10,
+                "c1f_svart": 0,
+                "f1p": 0,
+                "f1p_svart": 0
+            }
+        },
+        {
+            "nummer": "450",
+            "oppskrift": {
+                "c1f": 80,
+                "c1_brun": 10,
+                "c1f_beige": 10,
+                "c1f_svart": 0,
+                "f1p": 0,
+                "f1p_svart": 0
+            }
+        },
+        {
+            "nummer": "451",
+            "oppskrift": {
+                "c1f": 60,
+                "c1f_brun": 30,
+                "c1f_beige": 10,
+                "c1f_svart": 0,
+                "f1p": 0,
+                "f1p_svart": 0
+            }
+        },
+        {
+            "nummer": "452",
+            "oppskrift": {
+                "c1f": 10,
+                "c1f_brun": 80,
+                "c1f_beige": 10,
+                "c1f_svart": 0,
+                "f1p": 0,
+                "f1p_svart": 0
+            }
+        },
+        {
+            "nummer": "453",
+            "oppskrift": {
+                "c1f": 44,
+                "c1f_brun": 0,
+                "c1f_beige": 0,
+                "c1f_svart": 56,
+                "f1p": 0,
+                "f1p_svart": 0
+            }
+        },
+        {
+            "nummer": "2144",
+            "oppskrift": {
+                "c1l": 30,
+                "c1f_brun": 0,
+                "c1f_beige": 0,
+                "c1f_svart": 56,
+                "f1p": 20,
+                "f1p_svart": 50
+            }
+        },
+        {
+            "nummer": "vidde",
+            "oppskrift": {
+                "c1l": 75,
+                "c1f_brun": 0,
+                "c1f_beige": 0,
+                "c1f_svart": 0,
+                "f1p": 25,
+                "f1p_svart": 0
+            }
+        }],
+        "pels": [
+        {
+            "nummer": "pels",
+            "oppskrift": {
+                "f1p": 70,
+                "c1l": 30
+            }
+        }],     
+        "jul": [
+        {
+            "nummer": "rød",
+            "oppskrift": {
+                "c1_401": 85,
+                "c1_svart": 15
+            }
+        },     
+        {
+            "nummer": "blå",
+            "oppskrift": {
+                "c1_635": 60,
+                "c1_639": 30,
+                "c1_svart": 10
+            }
+        }],
+        "åt": [
+        {
+            "nummer": "rød",
+            "oppskrift": {
+                "c1_rød": 50,
+                "f1p_rød": 50
+            }
+        },
+        {
+            "nummer": "oransje",
+            "oppskrift": {
+                "c1_oransjeSpesial": 86,
+                "c1_614": 8,
+                "c1_svart": 6
+            }
+        },
+        {
+            "nummer": "mørkgrå",
+            "oppskrift": {
+                "c1": 43,
+                "f1p_svart": 41.2,
+                "c1_svart": 15.8
+            }
+        },
+        {
+            "nummer": "5480",
+            "oppskrift": {
+                "c1": 43,
+                "f1p_svart": 47,
+                "c1_svart": 10
+            }
+        }
+        ]
 }
