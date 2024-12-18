@@ -109,12 +109,17 @@ document.getElementById("ullForm").addEventListener("submit", function (event) {
     })
     .then((recipes) => {
       console.log('Hentet oppskrifter:', recipes);
-      const recipe = finnOppskrift(recipes, ulltype, nummer);
+      const ullTypeMatch = recipes[ulltype];
 
-      if (recipe) {
-        console.log('Fant oppskrift:', recipe);
-        const result = regnUt(mengde, recipe.oppskrift);
+      if (ullTypeMatch) {
+        const riktigOppskrift = finnOppskrift(ullTypeMatch, nummer);
+        console.log('Fant riktig oppskrift:', riktigOppskrift);
+
+        const utregnetResultat = regnUt(mengde, riktigOppskrift);
+        console.log('Regnet ut alle verdier:', utregnetResultat);
+
         displayResult(result, recipe.oppskrift);
+
       } else {
         console.error("Ingen oppskrift funnet for:", { ulltype, nummer }, ". Prøv å oppdatere siden, og gjør et nytt forsøk!");
       }
