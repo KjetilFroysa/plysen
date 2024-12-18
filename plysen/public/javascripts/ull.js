@@ -79,8 +79,10 @@ document.getElementById('ulltype').addEventListener('change', function() {
 
   // Add default option
   const defaultOption = document.createElement('option');
-  defaultOption.text = 'Velg Nummer';
-  nummerSelect.add(defaultOption);
+    defaultOption.text = 'Velg Nummer';
+    defaultOption.disabled = true;
+    defaultOption.selected = true;
+    nummerSelect.add(defaultOption);
 
   // Add new options based on selected ulltype
   if (nummerOptions[ulltype]) {
@@ -110,11 +112,13 @@ document.getElementById("ullForm").addEventListener("submit", function (event) {
       return response.json();
     })
     .then((recipes) => {
-      const oppskrift = finnOppskrift(recipes, ulltype, nummer);
+      console.log('Hentet oppskrifter:', recipes);
+      const recipe = finnOppskrift(recipes, ulltype, nummer);
 
-      if (oppskrift) {
-        const result = regnUt(mengde, oppskrift);
-        displayResult(result);
+      if (recipe) {
+        console.log('Fant oppskrift:', recipe);
+        const result = regnUt(mengde, recipe.oppskrift);
+        displayResult(result, recipe.oppskrift);
       } else {
         console.error("Ingen oppskrift funnet for:", { ulltype, nummer }, ". Prøv å oppdatere siden, og gjør et nytt forsøk!");
       }
@@ -128,10 +132,12 @@ function finnOppskrift(recipes, ulltype, nummer) {
     for (let i = 0; i < recipes[ulltype].length; i++) {
       console.log("Sjekker oppskriften:", recipes[ulltype][i]);
       if (recipes[ulltype][i].nummer === nummer) {
-        return recipes[ulltype][i].oppskrift;
+        console.log('Fant en match:', recipes[ulltype][i]);
+        return recipes[ulltype][i];
       }
     }
   }
+  console.log('Ingen match for:', { ulltype, nummer });
   return null;
 }
 
@@ -148,22 +154,24 @@ function regnUt(mengde, oppskrift) {
   return result;
 }
 
-function displayResult(result) {
+function displayResult(result, oppskrift) {
   // Create table
   let table = document.createElement("table");
   let tbody = document.createElement("tbody");
 
   // Add rows to table
   result.forEach((value, index) => {
-    let row = document.createElement("tr");
-    let cell1 = document.createElement("td");
-    let cell2 = document.createElement("td");
-    cell1.textContent = `Item ${index + 1}`;
+    let row = document.createElement('tr');
+    let cell1 = document.createElement('td');
+    let cell2 = document.createElement('td');
+    const propertyName = Object.keys(oppskrift)[index];
+    console.log('Property Name:', propertyName); // Debugging statement
+    cell1.textContent = propertyName; // Use the property name
     cell2.textContent = value;
     row.appendChild(cell1);
     row.appendChild(cell2);
     tbody.appendChild(row);
-  });
+});
 
   table.appendChild(tbody);
 
