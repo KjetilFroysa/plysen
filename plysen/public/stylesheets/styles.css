@@ -1,7 +1,18 @@
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+
 body {
+  background-color: rgb(223, 211, 189);
   padding: 50px;
-  font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font: 20px 'Montserrat', sans-serif;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -9,7 +20,7 @@ a {
   color: #00B7FF;
 }
 
-#resultTable2 {
+#resultTable {
   margin: 0 auto;
   margin-top: 20px;
   text-align: center;
@@ -17,12 +28,30 @@ a {
   border-collapse: collapse;
 }
 
+/* #resultTable td {
+  background-color: #350a0a;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+} */
+
 h1 {
-  font-size: 50px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 30px;
-  padding: 0;
+  border-bottom: solid 1px #235f79;
 }
 
+.btn {
+  scale: 1.2;
+}
+
+.btn:hover {
+  zoom: 1.04;
+}
+.btn:active {
+  zoom: 0.99;
+}
 input, select {
   text-align: center;
   margin-bottom: 10px;

@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plysen- Kalkulator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../stylesheets/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Ull Kalkulator</h1>
+        <h1>Plyse Kalkulator</h1>
         
     <form id="ullForm">
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6 mb-3">
             <label for="ulltype">Kvalitet</label>
-            <select class="form-control form-control-lg" id="ulltype">
+            <select class="form-select form-select-lg" id="ulltype" required>
                 <option disabled selected>Velg Kvalitet</option>
                 <option value="hifa">HIFA</option>
                 <option value="ragg">Ragg</option>
@@ -30,27 +31,39 @@
             </select>
             </div>
             
-            <div class="col">
+            <div class="col-12 col-md-6 mb-3">
             <label for="nummer">Nummer</label>
-            <select class="form-control form-control-lg" id="nummer">
+            <select class="form-select form-select-lg" id="nummer" required>
                 <option disabled selected>Velg Nummer</option>
             </select>
             </div>
         </div>
 
-        <div class="form-group row">
+        <div class="form-group row mb-3">
             <label for="mengde">Antall KG</label>
-            <input type="text" class="form-control" id="mengde" placeholder="F.eks 200">
+            <input type="text" class="form-control form-control-lg" required id="mengde" placeholder="F.eks 200">
         </div>
 
         <div class="form-group row">
-            <div class="col-md-6 offset-md-3 text-center">
-                <button type="submit" id="regn-ut" class="btn btn-success btn-block">Beregn</button>
+            <div class="form-control-lg text-center">
+                <button type="submit" id="regn-ut" class="btn btn-success btn-block">Trykk Her<br> For Å Regne Ut</button>
             </div>
         </div>
     </form>
     
-    <div id="resultTable"></div>
+    <div id="resultTable">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="ullKvaliteter table-primary ">
+                </tr>
+                <tr class="prosent table-primary"> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="resultat table-light"></tr>
+            </tbody>
+        </table>
+    </div>
 
     <script src="../../node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
