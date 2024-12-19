@@ -41,6 +41,6 @@ function displayInventory(ullLager) {
     cellMengde.textContent = item.mengde + " kg";
     row.appendChild(cellMengde);
 
-    inventoryTable.appendChild(row);
+    inventoryTableBody.appendChild(row);
   });
 }
