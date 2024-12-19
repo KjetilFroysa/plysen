@@ -1,9 +1,83 @@
 [
     {
+        "bilde": "../img/uvasket/uvasket hvit.jpg",
+        "navn": "Uvasket Hvit",
+        "nummer": 100,
+        "melert": false,
+        "uvasket": true,
+        "vasket": false,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/uvasket/uvasket lys grå.jpg",
+        "navn": "Uvasket Lys Grå",
+        "nummer": 110,
+        "melert": false,
+        "uvasket": true,
+        "vasket": false,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/vasket/vasket lys grå.jpg",
+        "navn": "Vasket Lys Grå",
+        "nummer": 110,
+        "melert": false,
+        "uvasket": false,
+        "vasket": true,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/uvasket/uvasket mellomgrå.jpg",
+        "navn": "Uvasket Mellom Grå",
+        "nummer": 115,
+        "melert": false,
+        "uvasket": true,
+        "vasket": false,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/vasket/vasket mellomgrå.jpg",
+        "navn": "Vasket Mellom Grå",
+        "nummer": 115,
+        "melert": false,
+        "uvasket": false,
+        "vasket": true,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/uvasket/uvasket mørkgrå.jpg",
+        "navn": "Uvasket Mørk Grå",
+        "nummer": 130,
+        "melert": false,
+        "uvasket": true,
+        "vasket": false,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/vasket/vasket mørk grå.jpg",
+        "navn": "Vasket Mørk Grå",
+        "nummer": 130,
+        "melert": false,
+        "uvasket": false,
+        "vasket": true,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/melert/melert gråfiolett.jpg",
+        "navn": "Melert Grå Fiolett",
+        "nummer": 2111,
+        "melert": true,
+        "uvasket": false,
+        "vasket": false,
+        "mengde": 100
+    },
+    {
         "bilde": "../img/melert/melert lindegrønn.jpg",
-        "navn": "Linde Grønn",
+        "navn": "Lindegrønn",
         "nummer": 326,
         "melert": true,
+        "uvasket": false,
+        "vasket": false,
         "mengde": 100
     },
     {
@@ -11,6 +85,8 @@
         "navn": "Dyp Rød",
         "nummer": 401,
         "melert": false,
+        "uvasket": false,
+        "vasket": false,
         "mengde": 70
 
     },
@@ -19,13 +95,44 @@
         "navn": "Mais Gul",
         "nummer": 408,
         "melert": false,
+        "uvasket": false,
+        "vasket": false,
         "mengde": 50
     },
     {
         "bilde": "../img/melert/melert maisgul.jpg",
-        "navn": "Mais Gul- Melert",
+        "navn": "Melert Maisgul",
         "nummer": 408,
         "melert": true,
+        "uvasket": false,
+        "vasket": false,
         "mengde": 34
+    },
+    {
+        "bilde": "../img/melert/melert nisserød.jpg",
+        "navn": "Nisserød",
+        "nummer": 410,
+        "melert": true,
+        "uvasket": false,
+        "vasket": false,
+        "mengde": 50
+    },
+    {
+        "bilde": "../img/kald mørkegrønn.jpg",
+        "navn": "Kald Mørkgrønn",
+        "nummer": 418,
+        "melert": false,
+        "uvasket": false,
+        "vasket": false,
+        "mengde": 50
+    },
+    {
+        "bilde": "../img/mørk fiolett.jpg",
+        "navn": "Mørk Fiolett",
+        "nummer": 441,
+        "melert": false,
+        "uvasket": false,
+        "vasket": false,
+        "mengde": 50
     }
 ]
