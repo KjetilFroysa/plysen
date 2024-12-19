@@ -1,0 +1,30 @@
+[
+    {
+        "bilde": "../img/melert/melert lindegrønn.jpg",
+        "navn": "Linde Grønn",
+        "nummer": 326,
+        "melert": true,
+        "mengde": 100
+    },
+    {
+        "bilde": "../img/dyp rød.jpg",
+        "navn": "Dyp Rød",
+        "nummer": 401,
+        "melert": false,
+        "mengde": 70
+    },
+    {
+        "bilde": "../img/maisgul.jpg",
+        "navn": "Mais Gul",
+        "nummer": 408,
+        "melert": false,
+        "mengde": 50
+    },
+    {
+        "bilde": "../img/melert/melert maisgul.jpg",
+        "navn": "Mais Gul- Melert",
+        "nummer": 408,
+        "melert": true,
+        "mengde": 34
+    }
+]

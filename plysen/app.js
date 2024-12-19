@@ -32,6 +32,17 @@ app.get('/data/recipes', (req, res) => {
   });
 });
 
+app.get('/data/ullLager', (req, res) => {
+  const recipesPath = path.join(__dirname, '/data/ullLager.json');
+  fs.readFile(recipesPath, 'utf8', (err, data) => {
+      if (err) {
+          res.status(500).send('Error reading recipes file');
+          return;
+      }
+      res.json(JSON.parse(data));
+  });
+});
+
 app.use('/', indexRouter);
 app.use('/inventory', inventoryRouter);
 

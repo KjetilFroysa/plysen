@@ -1,40 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('/data/recipes')
-        .then(response => response.json())
-        .then(recipes => {
-            displayInventory(recipes);
-        })
-        .catch(error => console.error('Error loading recipes:', error));
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/data/ullLager")
+    .then((response) => response.json())
+    .then((ullLager) => {
+      displayInventory(ullLager);
+    })
+    .catch((error) => console.error("Error loading recipes:", error));
 });
 
-function displayInventory(recipes) {
-    const inventoryTableBody = document.querySelector('#inventoryTable tbody');
+function displayInventory(ullLager) {
+  //Hent elementene
+  const inventoryTableBody = document.querySelector("#inventoryTableBody");
 
-    for (const ulltype in recipes) {
-        if (recipes.hasOwnProperty(ulltype)) {
-            recipes[ulltype].forEach(recipe => {
-                for (const property in recipe.oppskrift) {
-                    if (recipe.oppskrift.hasOwnProperty(property)) {
-                        const row = document.createElement('tr');
-                        const ulltypeCell = document.createElement('td');
-                        const nummerCell = document.createElement('td');
-                        const propertyCell = document.createElement('td');
-                        const valueCell = document.createElement('td');
+  //Fjern tidligere resultater
+  inventoryTableBody.innerHTML = "";
 
-                        ulltypeCell.textContent = ulltype;
-                        nummerCell.textContent = recipe.nummer;
-                        propertyCell.textContent = property;
-                        valueCell.textContent = recipe.oppskrift[property];
+  //Legg til resultatene i tbody"
+  ullLager.forEach((item) => {
+    let row = document.createElement("tr");
 
-                        row.appendChild(ulltypeCell);
-                        row.appendChild(nummerCell);
-                        row.appendChild(propertyCell);
-                        row.appendChild(valueCell);
+    let cellImg = document.createElement('td');
+        let img = document.createElement('img');
+        img.src = item.bilde;
+        img.alt = item.navn;
+        cellImg.appendChild(img);
+        row.appendChild(cellImg);
 
-                        inventoryTableBody.appendChild(row);
-                    }
-                }
-            });
-        }
-    }
+    let cellNavn = document.createElement("td");
+    cellNavn.textContent = item.navn;
+    row.appendChild(cellNavn);
+
+    let cellNummer = document.createElement("td");
+    cellNummer.textContent = item.nummer;
+    row.appendChild(cellNummer);
+
+    let cellMelert = document.createElement("td");
+    cellMelert.textContent = item.melert ? "Yes" : "No";
+    row.appendChild(cellMelert);
+
+    let cellMengde = document.createElement("td");
+    cellMengde.textContent = item.mengde + " kg";
+    row.appendChild(cellMengde);
+
+    inventoryTable.appendChild(row);
+  });
 }
