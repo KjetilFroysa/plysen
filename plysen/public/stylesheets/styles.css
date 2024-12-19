@@ -49,3 +49,16 @@ input, select {
   /* border-width: 2px !important;
   border-style: solid; */
 }
+
+.form-select option {
+  text-align: center;
+}
+
+/* Additional styles to attempt centering text in options */
+select {
+  text-align-last: center; /* For modern browsers */
+  -moz-text-align-last: center; /* For Firefox */
+}
+.input-width {
+  width: 250px; /* Set a fixed width for the input */
+}

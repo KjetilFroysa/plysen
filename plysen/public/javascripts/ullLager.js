@@ -34,7 +34,7 @@ function displayInventory(ullLager) {
     row.appendChild(cellNummer);
 
     let cellMelert = document.createElement("td");
-    cellMelert.textContent = item.melert ? "Yes" : "No";
+    cellMelert.textContent = item.melert ? "Ja" : "Nei";
     row.appendChild(cellMelert);
 
     let cellMengde = document.createElement("td");
