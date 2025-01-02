@@ -1,0 +1,32 @@
+[
+    {
+        "bilde": "",
+        "navn": "C1",
+        "råvare_index": 0,
+        "total": 20000
+    },
+    {
+        "bilde": "",
+        "navn": "C1F",
+        "råvare_index": 1,
+        "total": 15000
+    },
+    {
+        "bilde": "",
+        "navn": "C1L",
+        "råvare_index": 2,
+        "total": 1000
+    },
+    {
+        "bilde": "",
+        "navn": "F1P",
+        "råvare_index": 3,
+        "total": 18000
+    },
+    {
+        "bilde": "",
+        "navn": "C1- Uvasket",
+        "råvare_index": 4,
+        "total": 3000
+    }    
+]
