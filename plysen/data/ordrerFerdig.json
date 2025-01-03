@@ -1,0 +1,55 @@
+[
+    {"år": 2022,
+    "ordrer": [
+        {
+            "partinr": 1,
+            "type": "HIFA",
+            "nummer": "6056",
+            "total": 150,
+            "kommentar": "For lite olje"
+        },
+        {
+            "partinr": 2,
+            "type": "Ragg",
+            "nummer": "Hvit",
+            "total": 200,
+            "kommentar": "Helt feil"
+        },
+        {
+            "partinr": 3,
+            "type": "Vidde",
+            "nummer": "Koks",
+            "total": 120,
+            "kommentar": "+ 20kg mattel"
+        }
+        ]
+    },
+
+    {"år": 2023,
+    "ordrer": [
+        {
+            "partinr": 1,
+            "type": "HIFA",
+            "nummer": "6056",
+            "total": 150,
+            "kommentar": "For lite olje"
+        },
+        {
+            "partinr": 2,
+            "type": "Ragg",
+            "nummer": "Hvit",
+            "total": 200,
+            "kommentar": "Helt feil"
+        },
+        {
+            "partinr": 3,
+            "type": "Vidde",
+            "nummer": "Koks",
+            "total": 120,
+            "kommentar": "+ 20kg mattel"
+        }
+        ]
+    }
+
+
+]
