@@ -13,14 +13,13 @@ const kalkulatorRouter = require('./routes/kalkulator');
 
 const app = express();
 
-// Middleware to parse JSON bodies
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+// Middleware to parse JSON bodies
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -56,6 +55,38 @@ app.post('/submit-order', (req, res) => {
       });
   });
 });
+
+
+
+
+
+// Route to handle updating priorities
+app.post('/update-priorities', (req, res) => {
+    const updatedOrders = req.body.bestillinger;
+
+    const filePath = path.join(__dirname, 'data/bestillinger.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading orders file:', err);
+            return res.status(500).send({ success: false, message: 'Internal Server Error' });
+        }
+
+        const orders = JSON.parse(data);
+        orders.bestillinger = updatedOrders;
+
+        fs.writeFile(filePath, JSON.stringify(orders, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing orders file:', err);
+                return res.status(500).send({ success: false, message: 'Internal Server Error' });
+            }
+
+            res.send({ success: true });
+        });
+    });
+});
+
+
+
 
 // Route to handle marking an order as done
 app.post('/mark-as-done', (req, res) => {
@@ -115,21 +146,55 @@ app.post('/mark-as-done', (req, res) => {
   });
 });
 
-// Route to serve the form page
+// Route to handle removing an order
+app.post('/remove-order', (req, res) => {
+    const { index } = req.body;
+
+    const filePath = path.join(__dirname, 'data/bestillinger.json');
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading orders file:', err);
+            return res.status(500).send({ success: false, message: 'Internal Server Error' });
+        }
+
+        const orders = JSON.parse(data);
+        orders.bestillinger.splice(index, 1);
+
+        fs.writeFile(filePath, JSON.stringify(orders, null, 2), (err) => {
+            if (err) {
+                console.error('Error writing orders file:', err);
+                return res.status(500).send({ success: false, message: 'Internal Server Error' });
+            }
+
+            res.send({ success: true });
+        });
+    });
+});
+
+// Lag Ordre/Bestilling
 app.get('/lagOrdre', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/html/lagOrdre.html'));
 });
 
-// Se bestillinger
+// Se bestillinger som er underveis
 app.get('/ordrerBestilling', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/html/ordrerBestilling.html'));
 });
 
-// Se bestillinger
+// Se Ordrer som har blitt laget ferdig
 app.get('/ordrerFerdig', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/html/ordrerFerdig.html'));
 });
 
+// Se bestillinger (prioriteringer)
+app.get('/bestillinger', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/html/bestillinger.html'));
+});
+
+// Se Lager for tørk ull og plys
+app.get('/plysTorkLager', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/html/plysTorkLager.html'));
+  });
 
 
 app.get('/data/recipes', (req, res) => {
@@ -142,6 +207,50 @@ app.get('/data/recipes', (req, res) => {
       res.json(JSON.parse(data));
   });
 });
+
+app.get('/data/bestillinger', (req, res) => {
+  const recipesPath = path.join(__dirname, '/data/bestillinger.json');
+  fs.readFile(recipesPath, 'utf8', (err, data) => {
+      if (err) {
+          res.status(500).send('Error reading recipes file');
+          return;
+      }
+      res.json(JSON.parse(data));
+  });
+});
+
+app.get('/data/plysGarnLager', (req, res) => {
+    const recipesPath = path.join(__dirname, '/data/plysGarnLager.json');
+    fs.readFile(recipesPath, 'utf8', (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading recipes file');
+            return;
+        }
+        res.json(JSON.parse(data));
+    });
+  });
+  
+app.get('/data/plysUllLager', (req, res) => {
+    const recipesPath = path.join(__dirname, '/data/plysUllLager.json');
+    fs.readFile(recipesPath, 'utf8', (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading recipes file');
+            return;
+        }
+        res.json(JSON.parse(data));
+    });
+  });
+
+app.get('/data/torkLager', (req, res) => {
+    const recipesPath = path.join(__dirname, '/data/torkLager.json');
+    fs.readFile(recipesPath, 'utf8', (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading recipes file');
+            return;
+        }
+        res.json(JSON.parse(data));
+    });
+  });
 
 app.get('/data/ullLager', (req, res) => {
   const recipesPath = path.join(__dirname, '/data/ullLager.json');
@@ -176,9 +285,15 @@ app.get('/data/ordrerBestilling', (req, res) => {
   });
 });
 
+
+
+
 app.use('/', indexRouter);
 app.use('/ullLager', ullLagerRouter);
 app.use('/kalkulator', kalkulatorRouter);
+
+
+
 
 
 // catch 404 and forward to error handler
