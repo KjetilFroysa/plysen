@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const kalkulatorKnapp = document.getElementById('kalkulator');
-    const ullLagerKnapp = document.getElementById('ullLager');
+    const buttons = document.querySelectorAll('.nav-button');
 
-    kalkulatorKnapp.addEventListener('click', () => {
-        window.location.href = '/kalkulator';
-    });
-
-    ullLagerKnapp.addEventListener('click', () => {
-        window.location.href = '/ullLager';
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.id;
+            window.location.href = `/${targetId}`;
+        });
     });
 });

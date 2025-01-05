@@ -1,0 +1,40 @@
+[    
+    {
+        "navn": "100",
+        "historikk": [
+            {"år": 2022,
+            "verdier":[
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120},
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120}
+            ]},
+            {"år": 2023,
+            "verdier":[
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120},
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120}
+            ]}
+        ]
+    },
+    {
+        "navn": "110",
+        "historikk": [
+            {"år": 2022,
+            "verdier":[
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120},
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120}
+            ]},
+            {"år": 2023,
+            "verdier":[
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120},
+                {"dato": "", "nyVerdi": 120},
+                {"dato": "", "nyVerdi": -120}
+            ]}
+        ]
+    }
+]

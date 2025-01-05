@@ -26,3 +26,9 @@ body {
     justify-content: space-evenly;
     width: 300px; /* Adjust the width as needed */
 }
+
+h1 .text-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "partiNummer": 1,
+        "navn": "HIFA",
+        "nummer": "6055",
+        "total": 200,
+        "antallSekker": 3,
+        "dato": "03/01, 09:53"
+    },
+    {
+        "partiNummer": 2,
+        "navn": "Ragg",
+        "nummer": "Hvit 7,5 Nm",
+        "total": 140,
+        "antallSekker": 4,
+        "dato": "03/01, 09:53"
+    }
+]

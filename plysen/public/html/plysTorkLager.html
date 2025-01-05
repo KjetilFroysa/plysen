@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lager Display</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plys Garn Lager</h1>
+    <table id="plysGarnLagerTable"></table>
+
+    <h1>Plys Ull Lager</h1>
+    <table id="plysUllLagerTable"></table>
+
+    <h1>Tørk Lager</h1>
+    <table id="tørkLagerTable"></table>
+
+    <script>
+        async function fetchAndDisplayData(url, tableId) {
+            const response = await fetch(url);
+            const data = await response.json();
+            const table = document.getElementById(tableId);
+
+            // Create table headers
+            const headers = Object.keys(data[0]);
+            let headerRow = '<tr>';
+            headers.forEach(header => {
+                headerRow += `<th>${header}</th>`;
+            });
+            headerRow += '</tr>';
+            table.innerHTML = headerRow;
+
+            // Create table rows
+            data.forEach(item => {
+                let row = '<tr>';
+                headers.forEach(header => {
+                    row += `<td>${item[header]}</td>`;
+                });
+                row += '</tr>';
+                table.innerHTML += row;
+            });
+        }
+
+        fetchAndDisplayData('data/plysGarnLager', 'plysGarnLagerTable');
+        fetchAndDisplayData('data/plysUllLager', 'plysUllLagerTable');
+        fetchAndDisplayData('data/torkLager', 'tørkLagerTable');
+    </script>
+</body>
+</html>

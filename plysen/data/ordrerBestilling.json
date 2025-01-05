@@ -1,0 +1,25 @@
+{
+  "orders": [
+    {
+      "partiNummer": "1",
+      "dato": "2025-01-03T09:53",
+      "kvalitet": "Ragg",
+      "nummer": "Hvit",
+      "målvekt": "150"
+    },
+    {
+      "partiNummer": "2",
+      "dato": "2025-01-02T09:53",
+      "kvalitet": "Hifa",
+      "nummer": "6055",
+      "målvekt": "200"
+    },
+    {
+      "partiNummer": "3",
+      "dato": "2024-01-02T05:53",
+      "kvalitet": "Bondegarn",
+      "nummer": "110",
+      "målvekt": "100"
+    }
+  ]
+}
