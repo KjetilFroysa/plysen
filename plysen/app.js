@@ -9,12 +9,14 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
 const ullLagerRouter = require('./routes/ullLager');
 const kalkulatorRouter = require('./routes/kalkulator');
+const lagOrdreRouter = require('./routes/lagOrdre');
+const lagOrdreSubmitRouter = require('./routes/lagOrdreSubmit');
 
 const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
@@ -24,37 +26,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
-
-
-
-// Route to handle form submission
-app.post('/submit-order', (req, res) => {
-  const order = req.body;
-
-  // Read existing orders from the JSON file
-  const filePath = path.join(__dirname, 'data/ordrerBestilling.json');
-  fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-          console.error('Error reading orders file:', err);
-          return res.status(500).send('Internal Server Error');
-      }
-
-      const orders = JSON.parse(data);
-      orders.orders.push(order);
-
-      // Write updated orders back to the JSON file
-      fs.writeFile(filePath, JSON.stringify(orders, null, 2), (err) => {
-          if (err) {
-              console.error('Error writing orders file:', err);
-              return res.status(500).send('Internal Server Error');
-          }
-
-          res.send('Order submitted successfully');
-      });
-  });
-});
-
-
 
 
 
@@ -167,11 +138,6 @@ app.post('/remove-order', (req, res) => {
             res.send({ success: true });
         });
     });
-});
-
-// Lag Ordre/Bestilling
-app.get('/lagOrdre', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/html/lagOrdre.html'));
 });
 
 // Se bestillinger som er underveis
@@ -289,8 +255,8 @@ app.get('/data/ordrerBestilling', (req, res) => {
 app.use('/', indexRouter);
 app.use('/ullLager', ullLagerRouter);
 app.use('/kalkulator', kalkulatorRouter);
-
-
+app.use('/lagOrdre', lagOrdreRouter);
+app.use('/lagOrdreSubmit', lagOrdreSubmitRouter);
 
 
 

@@ -1,10 +1,9 @@
-var express = require('express');
-var path = require('path');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
+/* GET ull lager page. */
 router.get('/', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '../public/html/ullLager.html'));
+  res.render('ullLager');
 });
 
 module.exports = router;
