@@ -1,9 +1,40 @@
 body {
   background-color: rgb(223, 211, 189);
-  padding: 50px;
-  font: 20px 'Montserrat', sans-serif;
-  font-weight: 300;
+  font: 16px 'Montserrat', sans-serif;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.page-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap as needed */
 }
 
 a {
@@ -22,8 +53,8 @@ h1 {
   font-size: 2.5rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 30px;
-  border-bottom: solid 1px #235f79;
+  /* margin-bottom: 30px; */
+  /* border-bottom: solid 1px #235f79; */
 }
 
 img {
@@ -33,26 +64,24 @@ img {
   display: block;
 }
 
-.btn {
-  scale: 1.2;
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.btn:hover {
-  zoom: 1.04;
+.btn {
+  scale: 1.2;
+  margin: 10px 20px;
 }
-.btn:active {
-  zoom: 0.99;
-}
+
 input, select {
   text-align: center;
   margin-bottom: 10px;
-  /* border-width: 2px !important;
-  border-style: solid; */
 }
 
-.form-select option {
+/* .form-select option {
   text-align: center;
-}
+} */
 
 /* Additional styles to attempt centering text in options */
 select {

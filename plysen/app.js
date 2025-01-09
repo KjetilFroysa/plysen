@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes/index');
 const ullLagerRouter = require('./routes/ullLager');
 const kalkulatorRouter = require('./routes/kalkulator');
+const lagerOversiktRouter = require('./routes/lagerOversikt');
 const lagOrdreRouter = require('./routes/lagOrdre');
 const lagOrdreSubmitRouter = require('./routes/lagOrdreSubmit');
 
@@ -257,6 +258,8 @@ app.use('/ullLager', ullLagerRouter);
 app.use('/kalkulator', kalkulatorRouter);
 app.use('/lagOrdre', lagOrdreRouter);
 app.use('/lagOrdreSubmit', lagOrdreSubmitRouter);
+app.use('/lagerOversikt', lagerOversiktRouter);
+
 
 
 

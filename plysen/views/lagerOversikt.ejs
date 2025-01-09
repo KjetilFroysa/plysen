@@ -1,16 +1,21 @@
 <%- include('layout', { title: 'Lager- Oversikt', content: `
 
-<div class="text-center">
-    <button id="ordrerBestilling" class="btn btn-success nav-button">Se Ordrer</button>
-</div>
-<div class="text-center">
-    <button id="kalkulator" class="btn btn-success nav-button">Plyse<br> Kalkulator</button>
-</div>
-<div class="text-center">
-    <button id="ullLager" class="btn btn-success nav-button">Ull Lager</button>
-</div>
-<div class="text-center">
-    <button id="plysTorkLager" class="btn btn-success nav-button">Plys- og Tørk <br> Lager</button>
+<div class="page-container">
+    <header class="page-header">
+        <h1>Lager Oversikt</h1>
+    </header>
+
+    <main class="content-container">
+        <section class="button-container">
+            <button id="råvareLager" class="btn btn-success nav-button">Råvarer</button>
+            <button id="ullLager" class="btn btn-success nav-button">Ull</button>
+            <button id="plysTorkLager" class="btn btn-success nav-button">Plyst/Tørket</button>
+            <button id="historikk" class="btn btn-success nav-button">Historikk</button>
+            <button id="snartTomt" class="btn btn-success nav-button">Snart Tomt</button>
+            <button id="kart" class="btn btn-success nav-button">Kart</button>
+        </section>
+    </main>
 </div>
 
+<script src="/javascripts/lagerOversikt.js"></script>
 ` }) %>
