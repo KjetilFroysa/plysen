@@ -1,4 +1,4 @@
-<%- include('partials/header', { title: 'Lag Ordre' }) %>
+<%- include('layout', { title: 'Lag Ordre', content: `
 <form action="/lagOrdreSubmit" method="post">
     <label for="partinummer">Partinr:</label><br>
     <input type="number" id="partiNummer" name="partinummer" required><br><br>
@@ -27,4 +27,35 @@
         dateTimeInput.value = formattedDateTime;
     });
 </script>
-<%- include('partials/footer') %>
+` }) %>
+
+<!-- <%- include('partials/header', { title: 'Lag Ordre' }) %>
+<form action="/lagOrdreSubmit" method="post">
+    <label for="partinummer">Partinr:</label><br>
+    <input type="number" id="partiNummer" name="partinummer" required><br><br>
+    
+    <label for="dato">Dato:</label><br>
+    <input type="datetime-local" id="dato" name="dato" required><br><br>
+
+    <label for="kvalitet">Kvalitet:</label><br>
+    <input type="text" id="kvalitet" name="kvalitet" required><br><br>
+
+    <label for="nummer">Nummer/Navn:</label><br>
+    <input type="text" id="nummer" name="nummer" required><br><br>
+
+    <label for="målvekt">Målvekt (Kg):</label><br>
+    <textarea id="målvekt" name="målvekt" placeholder="150" required></textarea><br><br>
+
+    <input type="submit" value="Lag Ordre">
+</form>
+
+<script>
+    // Set default value for datetime-local input to today's date and time
+    document.addEventListener('DOMContentLoaded', function() {
+        const dateTimeInput = document.getElementById('dato');
+        const now = new Date();
+        const formattedDateTime = now.toISOString().slice(0, 16);
+        dateTimeInput.value = formattedDateTime;
+    });
+</script>
+<%- include('partials/footer') %> -->
