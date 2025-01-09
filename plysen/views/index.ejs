@@ -1,4 +1,19 @@
-<%- include('layout', { title: 'Hjemmeside', content: `
-    <h1>Hei!</h1>
-    <p>Dette er hjemmesiden.</p>
+<%- include('layout', { title: 'Hjem', content: `
+    <div class="container">
+        
+        <header>
+            <h1 class="text-center">Hei!</h1>
+        </header>
+
+        <section class="grid-row">
+            <div class="text-center">
+                <button id="bestillinger" class="btn btn-success nav-button">Se Haste <br> Bestillinger</button>
+            </div>
+            <div class="text-center">
+                <button id="lagOrdre" class="btn btn-success nav-button">Lag Ordre</button>
+            </div>
+            
+        </section>
+    
+    </div>
 ` }) %>
