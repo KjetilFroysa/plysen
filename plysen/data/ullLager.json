@@ -1,147 +1,525 @@
 [
     {
-        "bilde": "../img/uvasket/uvasket hvit.jpg",
+        "id": 1,
+        "bilde":"",
+        "navn": "C1",
+        "nummer": "22000",
+        "type": "Råvare",
+        "beskrivelse": "Dette er kanskje den viktigste råvaren vi tar inn. C1 brukes i nesten alle våre produkter.",
+        "kvantitet": 0
+    },
+    {
+        "id": 2,
+        "bilde":"",
+        "navn": "F1P",
+        "nummer": "",
+        "type": "Råvare",
+        "beskrivelse": "F1P er av spelsau, og blir ofte bare kalt pels i fabrikken. Brukes i pelsull (Blåne, Sølje, Tinde, Varde).",
+        "kvantitet": 0
+    },
+    {
+        "id": 3,
+        "bilde":"",
+        "navn": "Uvasket C1",
+        "nummer": "22002",
+        "type": "Råvare",
+        "beskrivelse": "Uvasket C1. Lukter litt dritt. Brukes i bondegarn, uvasket variantene.",
+        "kvantitet": 0
+    },
+    {
+        "id": 4,
+        "bilde":"",
+        "navn": "C1F",
+        "nummer": "",
+        "type": "Råvare",
+        "beskrivelse": "C1F er finull varianten av C1. Denne brukes i Luna/Sol/Vilje/Vidde kvalitetene).",
+        "kvantitet": 0
+    },
+    {
+        "id": 5,
+        "bilde":"",
+        "navn": "C1L",
+        "nummer": "",
+        "type": "Råvare",
+        "beskrivelse": "C1L er lammeull varianten av C1. Denne brukes i pelsull (Blåne, Sølje, Tinde, Varde).",
+        "kvantitet": 0
+    },
+    {
+        "id": 6,
+        "bilde":"",
+        "navn": "Nylon",
+        "nummer": "",
+        "type": "Råvare",
+        "beskrivelse": "Nylon er syntetisk, og brukes for å forsterke visse kvaliteter som Ragg.",
+        "kvantitet": 0
+    },
+    {
+        "id": 7,
+        "bilde":"",
+        "navn": "Ullfyll",
+        "nummer": "21000",
+        "beskrivelse": "Ullfyll blir laget av rester fra produksjonen. Dette blir brukt som fyll i puter og pledd.",
+        "kvantitet": 0
+    },
+    {
+        "id": 8,
+        "bilde":"",
+        "navn": "Syntetisk Fyllmateriale",
+        "nummer": "13000",
+        "type": "Nylon",
+        "beskrivelse": "Laget av nylon(eller polyesterfiber som det står på nettsiden). Brukes i dyner, puter og soveposer.",
+        "kvantitet": 0
+    },
+    {
+        "id": 9,
+        "bilde":"",
+        "navn": "F1",
+        "nummer": "22001",
+        "kvantitet": 0
+    },
+    {
+        "id": 10,
+        "bilde":"",
+        "navn": "Vasket Pelsull, Naturgrå",
+        "nummer": "223004V",
+        "kvantitet": 0
+    },
+    {
+        "id": 11,
+        "bilde":"",
         "navn": "Uvasket Hvit",
         "nummer": "100",
-        "mengde": 100
+        "type": "C1",
+        "bestårAv": [{"id": 1}, {"id": 3}],
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/uvasket/uvasket lys grå.jpg",
+        "id": 12,
+        "bilde": "",
         "navn": "Uvasket Lys Grå",
         "nummer": "110",
-        "mengde": 100
+        "type": "C1",
+        "bestårAv": [{"id": 1}, {"id": 3}, {"id": 46}],//**********
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/vasket/vasket lys grå.jpg",
+        "id": 13,
+        "bilde": "",
         "navn": "Vasket Lys Grå",
         "nummer": "110V",
-        "mengde": 100
+        "type": "C1",
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/uvasket/uvasket mellomgrå.jpg",
+        "id": 14,
+        "bilde": "",
         "navn": "Uvasket Mellom Grå",
         "nummer": "115",
-        "mengde": 100
+        "type": "C1",
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/vasket/vasket mellomgrå.jpg",
+        "id": 15,
+        "bilde": "",
+        "navn": "Pelsull/C1 Naturgrå",
+        "nummer": "115P",
+        "type": "C1",
+        "kvantitet": 0
+    },
+    {
+        "id": 16,
+        "bilde": "",
         "navn": "Vasket Mellom Grå",
         "nummer": "115V",
-        "mengde": 100
+        "type": "C1",
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/uvasket/uvasket mørkgrå.jpg",
+        "id": 17,
+        "bilde": "",
         "navn": "Uvasket Mørk Grå",
         "nummer": "130",
-        "mengde": 100
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/vasket/vasket mørk grå.jpg",
+        "id": 18,
+        "bilde": "",
         "navn": "Vasket Mørk Grå",
         "nummer": "130V",
-        "mengde": 100
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert gråfiolett.jpg",
+        "id": 19,
+        "bilde": "",
         "navn": "Melert Grå Fiolett",
         "nummer": "2111M",
-        "mengde": 100
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert lindegrønn.jpg",
+        "id": 20,
+        "bilde": "",
         "navn": "Melert Lindegrønn",
         "nummer": "326M",
-        "mengde": 100
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/dyp rød.jpg",
+        "id": 21,
+        "bilde": "",
         "navn": "Dyp Rød",
         "nummer": "401",
-        "mengde": 70
+        "kvantitet": 0
 
     },
     {
-        "bilde": "../img/maisgul.jpg",
+        "id": 22,
+        "bilde": "",
         "navn": "Mais Gul",
         "nummer": "408",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert maisgul.jpg",
+        "id": 23,
+        "bilde": "",
         "navn": "Melert Maisgul",
         "nummer": "408M",
-        "mengde": 34
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert nisserød.jpg",
+        "id": 24,
+        "bilde": "",
         "navn": "Melert Nisserød",
         "nummer": "410M",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/kald mørkegrønn.jpg",
+        "id": 25,
+        "bilde": "",
         "navn": "Kald Mørkgrønn",
         "nummer": "418",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/mørk fiolett.jpg",
+        "id": 26,
+        "bilde": "",
         "navn": "Mørk Fiolett",
         "nummer": "441",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/mørk brun.jpg",
+        "id": 27,
+        "bilde": "",
         "navn": "Mørk Brun",
         "nummer": "459",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/lys aprikos.jpg",
+        "id": 28,
+        "bilde": "",
         "navn": "Lys Aprikos",
         "nummer": "524",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert lys aprikos.jpg",
+        "id": 29,
+        "bilde": "",
         "navn": "Melert Lys Aprikos",
         "nummer": "524M",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/sukkerspinn.jpg",
+        "id": 30,
+        "bilde": "",
         "navn": "Sukkerspinn",
         "nummer": "536",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert sukkerspinn.jpg",
+        "id": 31,
+        "bilde": "",
         "navn": "Melert Sukkerspinn",
         "nummer": "536M",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/beige.jpg",
+        "id": 32,
+        "bilde": "",
         "navn": "Beige",
         "nummer": "5417",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert beige.jpg",
+        "id": 33,
+        "bilde": "",
         "navn": "Melert Beige",
         "nummer": "5417M",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/gressgrønn.jpg",
+        "id": 34,
+        "bilde": "",
         "navn": "Gressgrønn",
         "nummer": "546",
-        "mengde": 50
+        "kvantitet": 0
     },
     {
-        "bilde": "../img/melert/melert gressgrønn.jpg",
+        "id": 35,
+        "bilde": "",
         "navn": "Melert Gressgrønn",
         "nummer": "546M",
-        "mengde": 50
+        "kvantitet": 0
+    },
+    {
+        "id": 36,
+        "bilde": "",
+        "navn": "Aprikos",
+        "nummer": "608",
+        "kvantitet": 0
+    },
+    {
+        "id": 37,
+        "bilde": "",
+        "navn": "Melert Aprikos",
+        "nummer": "608M",
+        "kvantitet": 0
+    },
+    {
+        "id": 38,
+        "bilde": "",
+        "navn": "Rødbrun",
+        "nummer": "609",
+        "kvantitet": 0
+    },
+    {
+        "id": 39,
+        "bilde": "",
+        "navn": "Melert Rødbrun",
+        "nummer": "609M",
+        "kvantitet": 0
+    },
+    {
+        "id": 40,
+        "bilde": "",
+        "navn": "Rødlig Aprikos",
+        "nummer": "610",
+        "kvantitet": 0
+    },
+    {
+        "id": 41,
+        "bilde": "",
+        "navn": "Melert Rødlig Aprikos",
+        "nummer": "610M",
+        "kvantitet": 0
+    },
+    {
+        "id": 42,
+        "bilde": "",
+        "navn": "Skarp Rød",
+        "nummer": "614",
+        "kvantitet": 0
+    },
+    {
+        "id": 43,
+        "bilde": "",
+        "navn": "Brun",
+        "nummer": "620",
+        "kvantitet": 0
+    },
+    {
+        "id": 44,
+        "bilde": "",
+        "navn": "Mosegrønn",
+        "nummer": "621",
+        "kvantitet": 0
+    },
+    {
+        "id": 45,
+        "bilde": "",
+        "navn": "Grønn",
+        "nummer": "624",
+        "kvantitet": 0
+    },
+    {
+        "id": 46,
+        "bilde": "",
+        "navn": "Melert Grønn",
+        "nummer": "624M",
+        "kvantitet": 0
+    },
+    {
+        "id": 47,
+        "bilde": "",
+        "navn": "Ismint",
+        "nummer": "627",
+        "kvantitet": 0
+    },
+    {
+        "id": 48,
+        "bilde": "",
+        "navn": "Melert Ismint",
+        "nummer": "627M",
+        "kvantitet": 0
+    },
+    {
+        "id": 49,
+        "bilde": "",
+        "navn": "Sjøgrønn",
+        "nummer": "629",
+        "kvantitet": 0
+    },
+    {
+        "id": 50,
+        "bilde": "",
+        "navn": "Melert Sjøgrønn",
+        "nummer": "629M",
+        "kvantitet": 0
+    },
+    {
+        "id": 51,
+        "bilde": "",
+        "navn": "Turkis",
+        "nummer": "631",
+        "kvantitet": 0
+    },
+    {
+        "id": 52,
+        "bilde": "",
+        "navn": "Dongeriblå",
+        "nummer": "635",
+        "kvantitet": 0
+    },
+    {
+        "id": 53,
+        "bilde": "",
+        "navn": "Melert Dongeriblå",
+        "nummer": "635M",
+        "kvantitet": 0
+    },
+    {
+        "id": 54,
+        "bilde": "",
+        "navn": "Marineblå",
+        "nummer": "638",
+        "kvantitet": 0
+    },
+    {
+        "id": 55,
+        "bilde": "",
+        "navn": "Melert Marineblå",
+        "nummer": "638M",
+        "kvantitet": 0
+    },
+    {
+        "id": 56,
+        "bilde": "",
+        "navn": "Kongeblå",
+        "nummer": "639",
+        "kvantitet": 0
+    },
+    {
+        "id": 57,
+        "bilde": "",
+        "navn": "Melert Kongeblå",
+        "nummer": "639M",
+        "kvantitet": 0
+    },
+    {
+        "id": 58,
+        "bilde": "",
+        "navn": "Nisseblå",
+        "nummer": "640M",
+        "kvantitet": 0
+    },
+    {
+        "id": 59,
+        "bilde": "",
+        "navn": "Bleket Hvit",
+        "nummer": "647",
+        "kvantitet": 0
+    },
+    {
+        "id": 60,
+        "bilde": "",
+        "navn": "Stålgrå",
+        "nummer": "652",
+        "kvantitet": 0
+    },
+    {
+        "id": 61,
+        "bilde": "",
+        "navn": "Svart",
+        "nummer": "653",
+        "kvantitet": 0
+    },
+    {
+        "id": 62,
+        "bilde": "",
+        "navn": "Koksgrå",
+        "nummer": "656",
+        "kvantitet": 0
+    },
+    {
+        "id": 63,
+        "bilde": "",
+        "navn": "Vasket Hvit",
+        "nummer": "657",
+        "kvantitet": 0
+    },
+    {
+        "id": 64,
+        "bilde": "",
+        "navn": "Cyklamen",
+        "nummer": "662",
+        "kvantitet": 0
+    },
+    {
+        "id": 65,
+        "bilde": "",
+        "navn": "Melert Cyklamen",
+        "nummer": "662M",
+        "kvantitet": 0
+    },
+    {
+        "id": 66,
+        "bilde": "",
+        "navn": "Oransje",
+        "nummer": "670",
+        "kvantitet": 0
+    },
+    {
+        "id": 67,
+        "bilde": "",
+        "navn": "Melert Oransje",
+        "nummer": "670M",
+        "kvantitet": 0
+    },
+    {
+        "id": 68,
+        "bilde": "",
+        "navn": "Burgunder",
+        "nummer": "672",
+        "kvantitet": 0
+    },
+    {
+        "id": 69,
+        "bilde": "",
+        "navn": "Gul",
+        "nummer": "71o",
+        "kvantitet": 0
+    },
+    {
+        "id": 70,
+        "bilde": "",
+        "navn": "Oker",
+        "nummer": "713",
+        "kvantitet": 0
+    },
+    {
+        "id": 71,
+        "bilde": "",
+        "navn": "Melert Oker",
+        "nummer": "713M",
+        "kvantitet": 0
     }
+
+
 ]

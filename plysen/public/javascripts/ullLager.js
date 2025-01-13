@@ -8,13 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function displayInventory(ullLager) {
-  //Hent elementene
   const inventoryTableBody = document.querySelector("#inventoryTableBody");
-
-  //Fjern tidligere resultater
   inventoryTableBody.innerHTML = "";
-
-  //Legg til resultatene i tbody"
   ullLager.forEach((item) => {
     let row = document.createElement("tr");
 
@@ -33,9 +28,13 @@ function displayInventory(ullLager) {
     cellNummer.textContent = item.nummer;
     row.appendChild(cellNummer);
 
-    let cellMengde = document.createElement("td");
-    cellMengde.textContent = item.mengde + " kg";
-    row.appendChild(cellMengde);
+    let cellType = document.createElement("td");
+    cellType.textContent = item.type || ""; // Handle missing type property
+    row.appendChild(cellType);
+
+    let cellKvantitet = document.createElement("td");
+    cellKvantitet.textContent = item.kvantitet + " kg";
+    row.appendChild(cellKvantitet);
 
     inventoryTableBody.appendChild(row);
   });

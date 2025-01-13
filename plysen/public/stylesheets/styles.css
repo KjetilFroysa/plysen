@@ -2,6 +2,7 @@ body {
   background-color: rgb(223, 211, 189);
   font: 16px 'Montserrat', sans-serif;
   text-align: center;
+  line-height: 1.4;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,7 +51,7 @@ a {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   /* margin-bottom: 30px; */
@@ -67,6 +68,12 @@ img {
 .button-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.button-container-jobboversikt {
+  display: flex;
+  flex-direction: column; /* Arrange buttons in a column */
+  align-items: center; /* Center buttons horizontally */
 }
 
 .btn {

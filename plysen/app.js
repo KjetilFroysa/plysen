@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 
 const indexRouter = require('./routes/index');
+const jobbOversiktRouter = require('./routes/jobbOversikt');
 const ullLagerRouter = require('./routes/ullLager');
 const kalkulatorRouter = require('./routes/kalkulator');
 const lagerOversiktRouter = require('./routes/lagerOversikt');
@@ -25,7 +26,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
 
@@ -151,11 +153,6 @@ app.get('/ordrerFerdig', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/html/ordrerFerdig.html'));
 });
 
-// Se bestillinger (prioriteringer)
-app.get('/bestillinger', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/html/bestillinger.html'));
-});
-
 // Se Lager for tørk ull og plys
 app.get('/plysTorkLager', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/html/plysTorkLager.html'));
@@ -254,6 +251,7 @@ app.get('/data/ordrerBestilling', (req, res) => {
 
 
 app.use('/', indexRouter);
+app.use('/jobbOversikt', jobbOversiktRouter);
 app.use('/ullLager', ullLagerRouter);
 app.use('/kalkulator', kalkulatorRouter);
 app.use('/lagOrdre', lagOrdreRouter);
